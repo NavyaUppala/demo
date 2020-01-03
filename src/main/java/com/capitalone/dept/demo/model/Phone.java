@@ -1,12 +1,9 @@
 package com.capitalone.dept.demo.model;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Phone {
@@ -17,10 +14,6 @@ public class Phone {
 
 	private String type;
 	private String number;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FK_CUSTOMER_ID")
-	private Customer customerPhone;
 
 	public Phone() {
 	}
@@ -52,14 +45,6 @@ public class Phone {
 
 	public void setNumber(String number) {
 		this.number = number;
-	}
-
-	public Customer getCustomerPhone() {
-		return customerPhone;
-	}
-
-	public void setCustomerPhone(Customer customerPhone) {
-		this.customerPhone = customerPhone;
 	}
 
 }

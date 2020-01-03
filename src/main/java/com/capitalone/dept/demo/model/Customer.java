@@ -23,7 +23,7 @@ public class Customer {
 
 	private String fname;
 	private String lname;
-	private String age;
+	private Integer age;
 	private LocalDateTime accountOpenDate;
 	private Double acctBalance;
 
@@ -31,7 +31,7 @@ public class Customer {
 	@JoinColumn(name = "address_id", referencedColumnName = "id", unique = true)
 	private Address address;
 
-	@OneToMany(mappedBy = "customerPhone")
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Phone> phones;
 
 	public Customer() {
@@ -69,12 +69,20 @@ public class Customer {
 		this.lname = lname;
 	}
 
-	public String getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public List<Phone> getPhones() {
+		return phones;
+	}
+
+	public void setPhones(List<Phone> phones) {
+		this.phones = phones;
 	}
 
 	public LocalDateTime getAccountOpenDate() {
