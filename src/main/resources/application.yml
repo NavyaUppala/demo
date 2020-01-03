@@ -4,7 +4,7 @@ spring:
     password: docker
   liquibase:
     enabled: false
-    change-log: classpath:/db-changelog/changelog-master.yml      jpa:    hibernate:      ddl-auto: create-drop    properties:
+    change-log: classpath:/db-changelog/changelog-master.yml      jpa:    hibernate:      ddl-auto: update    properties:
       hibernate:
         jdbc:
           lob:

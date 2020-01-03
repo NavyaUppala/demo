@@ -2,6 +2,7 @@ package com.capitalone.dept.demo.controllers;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,10 +23,13 @@ public class EntryController {
 
 	@PostMapping("/createUser")
 	public Customer createUser(@RequestBody Customer customer) {
-
 		return customerRepo.save(customer);
 	}
 
+	@GetMapping("/getAllCustomer")
+	public List<Customer> getAllCustomer() {
+		return customerRepo.findAll();
+	}
 	@GetMapping("/getCustomer")
 	public Customer getCustomer() {
 		Customer customer = new Customer();
