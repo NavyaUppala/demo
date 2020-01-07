@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.99.100:5432/postgres    username: docker
+    url: jdbc:postgresql://3.92.186.90:5432/postgres    username: docker
     password: docker
   liquibase:
     enabled: false
@@ -8,4 +8,8 @@ spring:
       hibernate:
         jdbc:
           lob:
-            non_contextual_creation: true      
+            non_contextual_creation: true  jackson:    serialization:      write-dates-as-timestamps: false
+kafka:
+   bootstrap-servers: 3.92.186.90:9092  
+   topic:
+      avro: customer-topic  
