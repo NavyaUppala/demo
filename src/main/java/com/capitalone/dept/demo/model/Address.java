@@ -9,8 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Address implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -115,6 +117,12 @@ public class Address implements Serializable {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [id=" + id + ", stree1=" + stree1 + ", Street2=" + Street2 + ", apt=" + apt + ", city=" + city
+				+ ", state=" + state + ", Country=" + Country + ", zipCode=" + zipCode + ", customer=" + customer + "]";
 	}
 
 }

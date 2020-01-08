@@ -6,7 +6,7 @@
     {
       "name": "customerId",
       "type": [
-        "string",
+        "int",
         "null"
       ]
     },
@@ -27,21 +27,24 @@
     {
       "name": "age",
       "type": [
-        "string",
+        "int",
         "null"
       ]
     },
     {
       "name": "accountOpenDate",
       "type": [
-        "string",
-        "null"
-      ]
+        "null", {
+          "type" : "string",
+          "logicalType" : "timestamp-micros"
+      }
+      ],
+      "default" : null
     },
     {
       "name": "acctBalance",
       "type": [
-        "string",
+        "double",
         "null"
       ]
     },
@@ -133,7 +136,7 @@
               ]
             },
             {
-              "name": "number",
+              "name": "phoneNumber",
               "type": [
                 "string",
                 "null"

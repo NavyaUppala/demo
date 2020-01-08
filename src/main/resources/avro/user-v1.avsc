@@ -1,4 +1,4 @@
-{"namespace": "com.company.domain",
+{"namespace": "com.capitalone.dept.demo.model",
  "type": "record",
  "name": "User",
  "fields": [

@@ -11,20 +11,21 @@ import javax.persistence.Id;
 public class Phone implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String type;
-	private String number;
+	private String phoneNumber;
 
 	public Phone() {
 	}
 
-	public Phone(String type, String number) {
+	public Phone(Long id, String type, String phoneNumber) {
+		this.id = id;
 		this.type = type;
-		this.number = number;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public Long getId() {
@@ -43,12 +44,12 @@ public class Phone implements Serializable {
 		this.type = type;
 	}
 
-	public String getNumber() {
-		return number;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setNumber(String number) {
-		this.number = number;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 }

@@ -36,6 +36,7 @@ public class Customer implements Serializable {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
 	private LocalDateTime accountOpenDate;
+    
 	private Double acctBalance;
 
 	@OneToOne(cascade = CascadeType.ALL)
@@ -112,4 +113,12 @@ public class Customer implements Serializable {
 		this.acctBalance = acctBalance;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", fname=" + fname + ", lname=" + lname + ", age=" + age
+				+ ", accountOpenDate=" + accountOpenDate + ", acctBalance=" + acctBalance + ", address=" + address
+				+ ", phones=" + phones + "]";
+	}
+
+	
 }
