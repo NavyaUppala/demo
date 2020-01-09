@@ -25,7 +25,7 @@ public class CustomerAvroSerializer implements Serializer<Customer> {
 			byte[] result = null;
 
 			if (data != null) {
-				LOGGER.info("data='{}'", new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(data));
+			//	LOGGER.info("data='{}'", new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(data));
 
 				Schema schema = new Schema.Parser()
 						.parse(new ClassPathResource("avro/customer-v1.avsc").getInputStream());

@@ -34,12 +34,9 @@
     {
       "name": "accountOpenDate",
       "type": [
-        "null", {
-          "type" : "string",
-          "logicalType" : "timestamp-micros"
-      }
-      ],
-      "default" : null
+        "string",
+        "null"
+      ]
     },
     {
       "name": "acctBalance",
@@ -57,7 +54,7 @@
           {
             "name": "id",
             "type": [
-              "string",
+              "long",
               "null"
             ]
           },
@@ -124,7 +121,7 @@
             {
               "name": "id",
               "type": [
-                "string",
+                "long",
                 "null"
               ]
             },

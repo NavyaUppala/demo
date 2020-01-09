@@ -33,9 +33,9 @@ public class Customer implements Serializable {
 	private String lname;
 	private Integer age;
 	
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-	private LocalDateTime accountOpenDate;
+   // @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+   // @JsonSerialize(using = LocalDateTimeSerializer.class)
+	private String accountOpenDate;
     
 	private Double acctBalance;
 
@@ -97,11 +97,11 @@ public class Customer implements Serializable {
 		this.phones = phones;
 	}
 
-	public LocalDateTime getAccountOpenDate() {
+	public String getAccountOpenDate() {
 		return accountOpenDate;
 	}
 
-	public void setAccountOpenDate(LocalDateTime accountOpenDate) {
+	public void setAccountOpenDate(String accountOpenDate) {
 		this.accountOpenDate = accountOpenDate;
 	}
 
@@ -112,13 +112,5 @@ public class Customer implements Serializable {
 	public void setAcctBalance(Double acctBalance) {
 		this.acctBalance = acctBalance;
 	}
-
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", fname=" + fname + ", lname=" + lname + ", age=" + age
-				+ ", accountOpenDate=" + accountOpenDate + ", acctBalance=" + acctBalance + ", address=" + address
-				+ ", phones=" + phones + "]";
-	}
-
 	
 }
