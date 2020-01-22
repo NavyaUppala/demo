@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://54.172.231.196:5432/postgres    username: docker
+    url: jdbc:postgresql://34.205.73.7:5432/postgres    username: docker
     password: docker
   liquibase:
     enabled: false
@@ -10,7 +10,7 @@ spring:
           lob:
             non_contextual_creation: true  jackson:    serialization:      write-dates-as-timestamps: false
 kafka:
-   bootstrap-servers:  54.152.71.186:9092   
+   bootstrap-servers: 3.90.142.149:9092    
    topic:
       avro: 
         customer: customer-topic 
